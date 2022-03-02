@@ -21,8 +21,12 @@ const showPhoneDetails = (datas) =>{
             <div class="pro-pic">
                 <img class="w-50" src="${data.image}" alt="">
             </div>
-            <h4>Phone Name: ${data.phone_name}</h4>
-            <h5>Phone Brand:${data.brand}</h5>
+            <span>Phone Name: ${data.phone_name}</span>
+            <span>Phone Brand: ${data.brand}</span>
+            <span>Storage: ${data.storage}</span>
+            <span>Display Size: ${data.displaySize}</span>
+            <span>ChipSet: ${data.chipSet}</span>
+            <span>Memory: ${data.memory}</span>
             <div class="allbutton">
                 <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
@@ -33,8 +37,13 @@ const showPhoneDetails = (datas) =>{
             <div class="pro-pic">
                 <img class="w-50" src="${data.image}" alt="">
             </div>
-            <h4>Phone Name: ${data.phone_name}</h4>
-            <h5>Phone Brand: ${data.brand}</h5>
+            <span>Phone Name: ${data.phone_name}</span>
+            <span>Phone Brand: ${data.brand}</span>
+            
+            <span>Storage: ${data.storage}</span>
+            <span>Display Size: ${data.displaySize}</span>
+            <span>ChipSet: ${data.chipSet}</span>
+            <span>Memory: ${data.memory}</span>
             <div class="allbutton">
                 <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
@@ -45,8 +54,13 @@ const showPhoneDetails = (datas) =>{
             <div class="pro-pic">
                 <img class="w-50" src="${data.image}" alt="">
             </div>
-            <h4>Phone Name: ${data.phone_name}</h4>
-            <h5>Phone Brand:${data.brand}</h5>
+            <span>Phone Name: ${data.phone_name}</span>
+            <span>Phone Brand:${data.brand}</span>
+            
+            <span>Storage: ${data.storage}</span>
+            <span>Display Size: ${data.displaySize}</span>
+            <span>ChipSet: ${data.chipSet}</span>
+            <span>Memory: ${data.memory}</span>
             <div class="allbutton">
                 <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
@@ -69,10 +83,11 @@ const details = (id) =>{
 const setDetails = (info) =>{
     console.log(info);
     document.getElementById('details-container').innerHTML = `
-    <div>
-    <img src="" alt="">
-    <h1>${info.name}</h1>
-    <h1>${info.releaseDate}</h1>
+    <div class='border text-info'>
+    <h3>Id: ${info.slug}</h3>
+    <h3>Name: ${info.name}</h3>
+    <h3>Releasedate: ${info.releaseDate}</h3>
+    <h3>Brand: ${info.brand}</h3>
     </div>
     `
 }
