@@ -78,4 +78,4 @@ const setDetails = (info) =>{
     <h3>Brand: ${info.brand}</h3>
     </div>
     `
-}
+};
