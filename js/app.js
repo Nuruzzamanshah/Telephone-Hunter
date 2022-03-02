@@ -24,7 +24,7 @@ const showPhoneDetails = (datas) =>{
             <h4>Phone Name: ${data.phone_name}</h4>
             <h5>Phone Brand:${data.brand}</h5>
             <div class="allbutton">
-                <button onclick='details("${data.status}")' class="btn btn-info">Details</button>
+                <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
         </div>
       </div>
@@ -36,7 +36,7 @@ const showPhoneDetails = (datas) =>{
             <h4>Phone Name: ${data.phone_name}</h4>
             <h5>Phone Brand: ${data.brand}</h5>
             <div class="allbutton">
-                <button onclick='details("${data.status}")' class="btn btn-info">Details</button>
+                <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const showPhoneDetails = (datas) =>{
             <h4>Phone Name: ${data.phone_name}</h4>
             <h5>Phone Brand:${data.brand}</h5>
             <div class="allbutton">
-                <button onclick='details("${data.status}")' class="btn btn-info">Details</button>
+                <button onclick='details("${data.slug}")' class="btn btn-info">Details</button>
             </div>
         </div>
       </div>
@@ -60,8 +60,19 @@ const showPhoneDetails = (datas) =>{
 };
 
 const details = (id) =>{
-    const url =`https://openapi.programming-hero.com/api/phone/${id}`
+    const url =` https://openapi.programming-hero.com/api/phone/${id}`
     fetch(url)
     .then((Response) => Response.json())
-    .then((data) => console.log(data.status))
+    .then((data) => setDetails(data.data));
+}
+
+const setDetails = (info) =>{
+    console.log(info);
+    document.getElementById('details-container').innerHTML = `
+    <div>
+    <img src="" alt="">
+    <h1>${info.name}</h1>
+    <h1>${info.releaseDate}</h1>
+    </div>
+    `
 }
