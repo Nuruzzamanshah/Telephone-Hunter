@@ -8,8 +8,6 @@ const allPhone = () =>{
 };
 
 const showPhoneDetails = (datas) =>{
-    
-    
     for(const data of datas ){
         const parent = document.getElementById('phone-container');
         const div = document.createElement('div');
@@ -20,7 +18,7 @@ const showPhoneDetails = (datas) =>{
       <div class="col-sm p-5">
         <div  class="card border">
             <div class="pro-pic">
-                <img class="w-50" src="${data.image}" alt="">
+                <img class="w-100" src="${data.image}" alt="">
             </div>
             <span>Phone Name: ${data.phone_name}</span>
             <span>Phone Brand: ${data.brand}</span>
@@ -33,7 +31,7 @@ const showPhoneDetails = (datas) =>{
       <div class="col-sm p-5">
         <div class="card border">
             <div class="pro-pic">
-                <img class="w-50" src="${data.image}" alt="">
+                <img class="w-100" src="${data.image}" alt="">
             </div>
             <span>Phone Name: ${data.phone_name}</span>
             <span>Phone Brand: ${data.brand}</span>
@@ -46,7 +44,7 @@ const showPhoneDetails = (datas) =>{
       <div class="col-sm p-5">
         <div class="card border">
             <div class="pro-pic">
-                <img class="w-50" src="${data.image}" alt="">
+                <img class="w-100" src="${data.image}" alt="">
             </div>
             <span>Phone Name: ${data.phone_name}</span>
             <span>Phone Brand:${data.brand}</span>
